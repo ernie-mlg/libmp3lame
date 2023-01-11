@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <OutDir>$(SolutionDir)..\output\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)..\obj\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <LAME_BIN_PATH Condition="'$(LAME_BIN_PATH)' == ''">$(SolutionDir)..\</LAME_BIN_PATH>
+    <OutDir>$(LAME_BIN_PATH)output\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(LAME_BIN_PATH)obj\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <ItemDefinitionGroup>
